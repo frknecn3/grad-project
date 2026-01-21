@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+    --grey: rgb(219,219,219);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.sep {
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+header {
+    padding: 3vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px double black;
+}
+
+/* .title-container {} */
+
+.title-container h1 {
+    text-transform: uppercase;
+    font-family: 'BBH Bartle';
+    text-align: center;
+}
+
+.title-container h4 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 300;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.categories-container a {
+    width: 15rem;
+    height: 100%;
+    text-align: center;
+    transition: .5s all;
+    padding: 10px;
+}
+
+.categories-container a:hover {
+    background-color: black;
+    color: white;
+}
+
+.categories-container>a:not(:last-child) {
+    border-right: 1px solid var(--grey);
+}
+
+
+/* * hero */
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    gap: 20px;
+    padding: 50px;
+    padding-top: 20px;
+    border-bottom: var(--grey) 1px solid;
+
+}
+
+.hero-img{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img{
+    width: 100%;
+}
+
+.hero .text{
+    flex: 2
+}
+
+
+/* * ANa kısım */
+
+main {
+    padding: 20px 20px;
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+    gap: 20px;
+}
+
+.article-list {
+    flex: 5;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+main aside {
+    flex: 2;
+    border-left: 1px solid var(--grey);
+    padding: 10px;
+}
+
+
+/* * makale */
+
+.news-article {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    min-height: stretch;
+    cursor: pointer;
+
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+
+    padding: 20px;
+}
+
+.article-img-ctn {
+    width: 100%;
+    height: 100%;
+}
+
+.article-img-ctn img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: fill;
+    box-shadow: 0 0 20px rgb(224, 224, 224);
+}
+
+.article-title {
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.article-details{
+    font-size: 1.5rem;
+}
+
+
+.article-title:hover {
+    color: rgb(212, 23, 23);
+}
+
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-top: var(--grey) 1px solid;
+    margin-top: 5vh;
+}
+
+/* ^ RESPONSIVE TASARIM */
+
+/* tablet */
+@media (max-width: 1024px) {
+    html {
+        font-size: 8px;
+    }
+
+    .title-container h4 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+
+    aside {
+        display: none;
+        
+    }
+
+    main{
+        padding: 25px 10%;
+    }
+
+    .hero{
+        flex-direction: column;
+    }
+
+
+}
+
+/* mobil */
+@media (max-width: 500px) {
+    html {
+        font-size: 6px;
+    }
+
+    .categories-container a {
+        padding: 3px;
+    }
+
+    main{
+        padding: 0 5%;
+    }
+}
