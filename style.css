@@ -11,8 +11,8 @@
     color: black;
 }
 
-:root{
-    --grey: rgb(219,219,219);
+:root {
+    --grey: rgb(219, 219, 219);
 }
 
 html {
@@ -22,6 +22,11 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .sep {
@@ -81,36 +86,52 @@ header {
 
 /* * hero */
 
-.hero{
+.hero-container{
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.hero-images{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.hero-images .left{
+    height: 100%;
+    display: block;
+}
+.hero-images .left img{
+    height: 100%;
+}
+
+.hero-images .right{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    gap: 20px;
-    padding: 50px;
-    padding-top: 20px;
-    border-bottom: var(--grey) 1px solid;
-
+    align-items: stretch;
+    gap: 10px;
+}
+.hero-images .right img{
+    height: 100%;
+    border: 3px solid transparent;
+    transition: all .3s;
 }
 
-.hero-img{
-    flex: 3;
-    display: flex;
-    justify-content: center;
+.hero-images .right img:hover{
+    border-radius: 10px;
+    border-color: black;
 }
 
-.hero-img img{
-    width: 100%;
+.hero-text{
+    min-height: 10rem;
 }
-
-.hero .text{
-    flex: 2
-}
-
-
 /* * ANa kısım */
 
 main {
@@ -169,7 +190,7 @@ main aside {
     font-size: 2rem;
 }
 
-.article-details{
+.article-details {
     font-size: 1.5rem;
 }
 
@@ -181,7 +202,7 @@ main aside {
 
 
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,14 +228,14 @@ footer{
 
     aside {
         display: none;
-        
+
     }
 
-    main{
+    main {
         padding: 25px 10%;
     }
 
-    .hero{
+    .hero {
         flex-direction: column;
     }
 
@@ -231,7 +252,7 @@ footer{
         padding: 3px;
     }
 
-    main{
+    main {
         padding: 0 5%;
     }
 }
