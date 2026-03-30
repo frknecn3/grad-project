@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         articles.map((article, i) => renderArticle(article))
 
+        sessionStorage.removeItem('articles')
         sessionStorage.setItem('articles', JSON.stringify(res.data.articles))
     }
 
@@ -115,6 +116,7 @@ const loadShowcase = () => {
 
     const displayText = document.querySelector('.hero-text')
     const displayImage = document.querySelector('.display-image');
+    const imageLink = document.querySelector('.img-container');
     const secondaryImages = document.querySelectorAll('.secondary-image')
     secondaryImages.forEach((img, index) => {
         img.src = showcase[index].urlToImage
@@ -127,6 +129,7 @@ const loadShowcase = () => {
 
     displayText.firstElementChild.innerText = showcase[0].title
     displayText.lastElementChild.innerText = showcase[0].author
+    imageLink.href = `/article.html?id=${showcase[0].url}`
 
 
     console.log(showcase[0])
@@ -134,6 +137,7 @@ const loadShowcase = () => {
 
     secondaryImages.forEach((img, index) => {
         img.addEventListener('mouseover', () => {
+            
             // img.classList.add('hovered')
 
             let art = showcase[img.dataset.article];
@@ -141,7 +145,7 @@ const loadShowcase = () => {
             displayText.lastElementChild.innerText = art.author
 
             displayImage.src = art.urlToImage || notFound
-            displayImage.parentElement.href = "/"
+            displayImage.parentElement.href = `/article.html?id=${art.url}`
         })
 
         img.addEventListener('mouseleave', () => {
@@ -164,7 +168,7 @@ const buildCategoryArticle = (categoryArt) => {
 
     el.innerHTML = `
             <div class="popup-article">
-                <a href="">
+                <a href="/article.html?id=${categoryArt.url}">
                     <div class="img-container">
                             <div class="loader">
                                 <div class="d-1"></div>
@@ -186,12 +190,16 @@ const buildCategoryArticle = (categoryArt) => {
 }
 const handlePopup = async (category) => {
 
-    
+
     const res = await axios.get(`http://localhost:3000/api/news?category=${category}`)
 
     console.log(`http://localhost:3000/api/news?category=${category}`)
 
     let arts = res.data.articles;
+
+    const oldArticles = JSON.parse(sessionStorage.getItem('articles'));
+    sessionStorage.removeItem('articles');
+    sessionStorage.setItem('articles', JSON.stringify([...oldArticles, ...res.data.articles ]))
 
     arts.forEach((art, index) => {
         popup.appendChild(buildCategoryArticle(art));
