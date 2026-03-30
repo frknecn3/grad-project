@@ -6,25 +6,25 @@
 
 ## 🚀 Öne Çıkan Özellikler
 
-* [cite_start]**🛡️ Güvenli Proxy Katmanı:** API anahtarının istemci tarafında ifşa olmaması için Node.js üzerinden vekil sunucu yapılandırması. [cite: 124]
-* [cite_start]**⚡ Performans Odaklılık:** Tekrarlanan API isteklerini önlemek için `sessionStorage` tabanlı önbellekleme. [cite: 156, 157]
-* [cite_start]**📂 Kategorisel Filtreleme:** İş, Eğlence, Sağlık, Bilim, Spor ve Teknoloji alanlarında dinamik haber akışı. [cite: 84]
-* [cite_start]**📱 Responsive Tasarım:** Tüm cihazlarda (mobil, tablet, masaüstü) kusursuz görüntülenen modern arayüz. [cite: 35, 94]
-* [cite_start]**🧩 Dinamik İçerik:** URL parametreleri sayesinde tek bir şablon üzerinden binlerce haber detayını gösterebilme yeteneği. [cite: 154]
+* **🛡️ Güvenli Proxy Katmanı:** API anahtarının istemci tarafında ifşa olmaması için Node.js üzerinden vekil sunucu yapılandırması. [cite: 124]
+* **⚡ Performans Odaklılık:** Tekrarlanan API isteklerini önlemek için `sessionStorage` tabanlı önbellekleme. [cite: 156, 157]
+* **📂 Kategorisel Filtreleme:** İş, Eğlence, Sağlık, Bilim, Spor ve Teknoloji alanlarında dinamik haber akışı. [cite: 84]
+* **📱 Responsive Tasarım:** Tüm cihazlarda (mobil, tablet, masaüstü) kusursuz görüntülenen modern arayüz. [cite: 35, 94]
+* **🧩 Dinamik İçerik:** URL parametreleri sayesinde tek bir şablon üzerinden binlerce haber detayını gösterebilme yeteneği. [cite: 154]
 
 ---
 
 ## 🛠️ Teknoloji Yığını
 
 ### Frontend
-- [cite_start]**Dil:** Vanilla JavaScript (ES6+)
-- [cite_start]**Yapı & Stil:** HTML5, CSS3
-- [cite_start]**İletişim:** Axios (HTTP Client)
+- **Dil:** Vanilla JavaScript (ES6+)
+- **Yapı & Stil:** HTML5, CSS3
+- **İletişim:** Axios (HTTP Client)
 
 ### Backend
-- [cite_start]**Platform:** Node.js
-- [cite_start]**Framework:** Express.js
-- [cite_start]**Güvenlik:** Dotenv (.env yönetimi) ve CORS
+- **Platform:** Node.js
+- **Framework:** Express.js
+- **Güvenlik:** Dotenv (.env yönetimi) ve CORS
 
 ---
 
