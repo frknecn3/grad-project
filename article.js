@@ -17,25 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     articleDiv.innerHTML = `
 
-            <div style="width: 1000px; display: block; margin: auto; margin-bottom: 100px;">
+            <div class="article">
                 <h1 style="margin-bottom: 3px;">
                     ${article.title}
                 </h1>
-                <div style="margin-bottom: 10px;">
+                <div class="article-top">
                     ${article.author && `
                         <span>${article.author}</span>
                     <span>-</span>`
                     }
                     <span>${new Date(article.publishedAt).toLocaleDateString()}</span>
                 </div>
-                <img style="height: 500px; width: 100%;" src="${article.urlToImage}" />
+                <img class="article-img" src="${article.urlToImage}" />
                 <p> 
                     ${article.description}
                 </p>
             </div>
             <div>
                 <p class="" style="margin-top: 20px; font-size: 18px; font-weight: normal;">
-                    ${article.content}
+                    ${article.content || placeholder}
                 </p>
             </div>
     `
@@ -52,3 +52,7 @@ const articleNotFoundTemplate = `
             </section>
         </main>
     `
+
+const placeholder = `
+    News API hasn't provided the actual content of this news article yet, this is why we are showing you this placeholder text instead of the actual content of the article. Thanks for your understanding.
+`
