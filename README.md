@@ -39,7 +39,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 2. **Bağımlılıkları yükleyin:**
    ```
-    cd manshet/backend
+    cd grad-project/backend
     npm install
    ```
 
