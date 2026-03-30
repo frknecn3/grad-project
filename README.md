@@ -34,7 +34,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1. **Depoyu klonlayın:**
    ```
-   git clone [https://github.com/frknecn3/grad-project.git](https://github.com/frknecn3/grad-project.git)
+   git clone https://github.com/frknecn3/grad-project.git
    ```
 
 2. **Bağımlılıkları yükleyin:**
