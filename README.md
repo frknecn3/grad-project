@@ -33,26 +33,29 @@
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1. **Depoyu klonlayın:**
-   ```bash
+   ```
    git clone [https://github.com/frknecn3/grad-project.git](https://github.com/frknecn3/grad-project.git)
    ```
 
 2. **Bağımlılıkları yükleyin:**
-   ```cd manshet/backend
+   ```
+    cd manshet/backend
     npm install
    ```
 
 3. **Çevresel değişkenleri ayarlayın:**
-   .env dosyasını oluşturup News API anahtarınızı ekleyin
+   
    ```
+   // .env dosyasını oluşturup News API anahtarınızı ekleyin
    API_KEY=your_api_key_here
    ```
 4. **Backend sunucusunu çalıştırın**
-    Terminaliniz /backend klasörünün içindeyken
+    
     ```
-        npm start
+    //Terminaliniz /backend klasörünün içindeyken
+    npm start
     ```
-5. **Arayüzü açın**
+5. **Arayüzü açın**<b>
     Ana klasördeki index.html dosyasını açın.
 
 <hr>
